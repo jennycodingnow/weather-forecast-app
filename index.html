@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/styles/index.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/e77df31685.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+
+    <title>Weather Report</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="search-box">
+            <input type="search" id="citySearch" name="citySearch" placeholder="Enter a location" />
+            <button id="submitCity" class="fa-solid fa-magnifying-glass"></button>
+        </div>
+        <span id="errorMessage" class="error-message"></span>
+        <div class="weather-box">
+            <h1 id="cityLabel">Denver</h1>
+            <h1 id="tempLabel">0°F</h1>
+            <h1 id="weatherCondition">Snow</h1>
+        </div>
+    
+    </div>
+    <script src="src/index.js" type="text/javascript"></script>
+    <script src="node_modules/axios/dist/axios.min.js"></script>
+</body>
+</html>
