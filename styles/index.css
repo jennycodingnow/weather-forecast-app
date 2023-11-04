@@ -83,25 +83,27 @@ body {
     height: min-content;
     align-items: center;
     margin-top: 100px;
-    color: rgba(21, 16, 16, 0.456);
+    color: #606060;
 }
 
 #tempLabel {
     font-size: 60px;
     justify-self: center;
     display: grid;
-    color: #606060;
+}
+
+#dayLabel {
+    font-size: 20px;
+    padding-bottom: 20px;
 }
 
 #cityLabel {
     font-size: 36px;
-    color: #606060;
     text-transform: capitalize;
 }
 
 #weatherCondition {
     font-size: 15px;
-    color: #606060;
 }
 
 .error-message {

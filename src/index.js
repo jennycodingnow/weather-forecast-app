@@ -27,6 +27,7 @@ const updateCityInLabel = () => {
   getLatAndLong();
   updateCity();
   updateCityLabel();
+  getTodayDate();
 };
 
 const updateCity = () => {
@@ -80,6 +81,14 @@ const getWeatherCond = (code) => {
     default:
       return null; // Return null for unrecognized codes
   }
+};
+
+const getTodayDate = () => {
+  const currentDate = new Date();
+  const options = { weekday: "long" };
+  const dayOfWeek = currentDate.toLocaleDateString("en-US", options);
+  const today = document.getElementById("dayLabel");
+  today.textContent = dayOfWeek;
 };
 
 const getLatAndLong = () => {
