@@ -7,8 +7,11 @@
 }
 
 body {
-
-    background-image: url("/assets/snowy.jpg");
+    background:
+        linear-gradient(to right,
+            rgba(0 0 0 / 0.5),
+            rgba(0 0 0 / 0)),
+        url("/assets/snowy.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -83,7 +86,7 @@ body {
     height: min-content;
     align-items: center;
     margin-top: 100px;
-    color: #606060;
+    color: white;
 }
 
 #tempLabel {

@@ -100,7 +100,6 @@ const getLatAndLong = () => {
   }
   // Clear any existing error messages
   clearErrorMessage();
-
   axios
     .get("https://geocoding-api.open-meteo.com/v1/search?", {
       params: {
@@ -108,7 +107,6 @@ const getLatAndLong = () => {
       },
     })
     .then((response) => {
-      console.log("this response:", response);
       if (response.data.results.length > 0) {
         const firstLocation = response.data.results[0];
         state.lat = firstLocation.latitude;
@@ -132,8 +130,7 @@ const displayErrorMessage = (message) => {
   errorMessageContainer.appendChild(errorMessageElement);
 };
 const clearErrorMessage = () => {
-  const errorMessageContainer =
-    document.getElementsByClassName("error-message");
+  const errorMessageContainer = document.getElementById("errorMessage");
   console.log(errorMessageContainer);
   errorMessageContainer.textContent = " "; // Clear existing error messages
 };
